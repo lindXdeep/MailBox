@@ -24,7 +24,7 @@ public class Main {
 
 
         // . . . . . 
-        
+
         // Random variables
         String randomFrom = "..."; // Некоторая случайная строка. Можете выбрать ее самостоятельно. 
         String randomTo = "...";  // Некоторая случайная строка. Можете выбрать ее самостоятельно.
@@ -42,5 +42,6 @@ public class Main {
         Arrays.asList(salary1, salary2, salary3).forEach(salaryService);
 
  
+       
     }
 }
