@@ -6,19 +6,21 @@ public class Main {
 
     public static void main(String[] args) {
 
-        MailMessage one = new MailMessage("john", "tom", "msg1");
-        MailMessage two = new MailMessage("tom", "john", "msg2");
-        MailMessage thre = new MailMessage("bill", "lue", "msg3");
-        MailMessage fore = new MailMessage("karl", "mikl", "msg4");
+        MailMessage firstMessage = new MailMessage("john", "tom", "msg1");
+        MailMessage secondMessage = new MailMessage("tom", "john", "msg2");
+        MailMessage thirdMessage = new MailMessage("bill", "lue", "msg3");
 
-        assert one.getFrom().equals("Robert Howard") : "Wrong firstMessage from address";
-        assert one.getTo().equals("H.P. Lovecraft") : "Wrong firstMessage to address";
-        assert one.getContent().endsWith("Howard!") : "Wrong firstMessage content ending";
+        assert firstMessage.getFrom().equals("Robert Howard") : "Wrong firstMessage from address";
+        assert firstMessage.getTo().equals("H.P. Lovecraft") : "Wrong firstMessage to address";
+        assert firstMessage.getContent().endsWith("Howard!") : "Wrong firstMessage content ending";
 
-        messages.stream().forEach(x -> System.out.println(x.getContent()));
+        List<MailMessage> messages = Arrays.asList(firstMessage, secondMessage, thirdMessage);
 
+        // Создание почтового сервиса.
+        MailService<String> mailService = new MailService<>();
+
+        // Обработка списка писем почтовым сервисом
+        messages.stream().forEachOrdered(mailService);
  
-
-   
     }
 }
