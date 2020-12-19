@@ -1,24 +1,24 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Main {
 
     public static void main(String[] args) {
-        
-        List<String> messages = new ArrayList<>();
-            messages.add("msg1");
-            messages.add("msg2");
-            messages.add("msg3");
-            messages.add("msg4");
 
-        MailBox<String> box =new MailBox<>();
-            box.put("john", messages);
-            box.put("tom", messages);
-            box.put("lue", messages);
-            box.put("pet", messages);
+        MailMessage one = new MailMessage("john", "tom", "msg1");
+        MailMessage two = new MailMessage("tom", "john", "msg2");
+        MailMessage thre = new MailMessage("bill", "lue", "msg3");
+        MailMessage fore = new MailMessage("karl", "mikl", "msg4");
 
+        assert one.getFrom().equals("Robert Howard") : "Wrong firstMessage from address";
+        assert one.getTo().equals("H.P. Lovecraft") : "Wrong firstMessage to address";
+        assert one.getContent().endsWith("Howard!") : "Wrong firstMessage content ending";
 
-        System.out.println(box.get("pet"));
+        messages.stream().forEach(x -> System.out.println(x.getContent()));
 
+ 
+
+   
     }
 }
