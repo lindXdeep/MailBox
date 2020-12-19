@@ -1,0 +1,22 @@
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>320</x><y>40</y><w>110</w><h>70</h></coordinates><panel_attributes>interface Sendable
+--
+String getFrom();
+String getTo();
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>300</x><y>170</y><w>150</w><h>100</h></coordinates><panel_attributes>abstract AbstractSendable 
+--
+private final String from;
+private final String to;
+--
+String getFrom();
+String getTo();</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>170</x><y>380</y><w>150</w><h>70</h></coordinates><panel_attributes>MailMessage
+--
+String content;
+--
+String getContent() </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>420</x><y>380</y><w>150</w><h>70</h></coordinates><panel_attributes>Salary
+--
+ Integer content;
+--
+Integer getContent()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>360</x><y>100</y><w>100</w><h>90</h></coordinates><panel_attributes>lt=&lt;.
+&lt;&lt;instanceOf&gt;&gt;</panel_attributes><additional_attributes>10;10;10;70</additional_attributes></element><element><id>Relation</id><coordinates><x>230</x><y>260</y><w>150</w><h>140</h></coordinates><panel_attributes>lt=&lt;.
+&lt;&lt;instanceOf&gt;&gt;</panel_attributes><additional_attributes>110;10;10;120</additional_attributes></element><element><id>Relation</id><coordinates><x>380</x><y>260</y><w>150</w><h>140</h></coordinates><panel_attributes>lt=&lt;.
+&lt;&lt;instanceOf&gt;&gt;</panel_attributes><additional_attributes>10;10;110;120</additional_attributes></element></diagram>

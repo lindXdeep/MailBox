@@ -8,12 +8,10 @@ public abstract class AbstractSendable implements Sendable {
         this.to = to;
     }
 
-    @Override
     public String getFrom() {
         return from;
     }
 
-    @Override
     public String getTo() {
         return to;
     }

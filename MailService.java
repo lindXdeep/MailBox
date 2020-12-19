@@ -1,6 +1,7 @@
 import java.util.function.Consumer;
 
-public class MailService<T> implements Consumer<MailMessage> {
+public class MailService<T> implements Consumer<Sendable> {
+
 
 
     public MailService(){
@@ -8,7 +9,9 @@ public class MailService<T> implements Consumer<MailMessage> {
     }
 
     @Override
-    public void accept(MailMessage t) {
-        System.out.println(t.getContent());
+    public void accept(Sendable t) {
+        System.out.println(t.get);
     }
+
+   
 }

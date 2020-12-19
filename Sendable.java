@@ -1,4 +1,4 @@
 public interface Sendable {
-    String getFrom();
-    String getTo();
+    public String getFrom();
+    public String getTo();
 }

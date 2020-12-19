@@ -3,7 +3,7 @@ public class MailMessage extends AbstractSendable {
     private final String content;
 
     public MailMessage(String from, String to, String content) {
-       super(from, to);
+        super(from, to);
         this.content = content;
     }
 
